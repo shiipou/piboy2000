@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: alex-page/github-project-automation-plus@v0.1.0
         with:
-          project: Backlog
+          project: v1.0.0
           column: To do
           repo-token: ${{ secrets.GITHUB_TOKEN }}
