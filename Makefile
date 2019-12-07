@@ -1,7 +1,6 @@
 python = python3
 pip = pip3
 
-
 install:
 	$(pip) install -r requirements.txt
 

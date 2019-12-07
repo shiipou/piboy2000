@@ -4,14 +4,17 @@ import signal
 
 import config as cfg
 from window.splash import Splash
+from window.stat import Stat
 
 class Piboy2000:
+
     def __init__(self):
         self._running = True
         self.size = (0, 0)
         self.screen = None
         self.window = None
- 
+        self.clock = pygame.time.Clock()
+
     def on_init(self):
         # Trap exit signal
         signal.signal(signal.SIGINT, self.on_exit)
@@ -25,16 +28,21 @@ class Piboy2000:
         self.screen = pygame.display.set_mode(self.size, pygame.HWSURFACE | pygame.DOUBLEBUF | pygame.FULLSCREEN)
         
         self._running = True
-        self.window = Splash(self.screen)
- 
+        if Splash(self.screen, self).on_init():
+            self.window = Stat(self.screen, self)
+        else:
+            self.on_exit()
+
     def on_event(self, event):
         if event.type == pygame.QUIT:
             self._running = False
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 self.on_exit()
-            else:
-                self.window.on_event(event)
+            elif event.key == pygame.K_0:
+                if self.current_view != event.key:
+                    self.current_view = event.key
+                    self.window = Stat(self.screen, self)
         else:
             self.window.on_event(event)
 
@@ -59,8 +67,9 @@ class Piboy2000:
                 self.on_event(event)
             self.on_loop()
             self.on_render()
+            self.clock.tick(cfg.screen_fps)
         self.on_exit()
- 
+
 if __name__ == "__main__" :
     piboy2000 = Piboy2000()
     piboy2000.start()

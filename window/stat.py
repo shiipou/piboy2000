@@ -4,7 +4,7 @@ import config as cfg
 from window.window import Window
 
  
-class Splash(Window):
+class Stat(Window):
 
     def __init__(self, screen, parent):
         super(Window, self).__init__(screen, parent)

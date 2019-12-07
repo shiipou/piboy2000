@@ -2,9 +2,8 @@ import pygame
 
 import config as cfg
 from window.window import Window
-
  
-class Splash(Window):
+class Head(Window):
 
     def __init__(self, screen, parent):
         super(Window, self).__init__(screen, parent)
@@ -26,8 +25,10 @@ class Splash(Window):
 
     def on_loop(self):
         super(Window, self).on_loop()
+
     def on_render(self):
-        super(Window, self).on_render()
+        pass
+    
     def on_exit(self):
         super(Window, self).on_exit()
     def exit(self):
