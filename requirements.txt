@@ -1,0 +1,5 @@
+requests
+numpy
+pydub
+pygame
+pytube
