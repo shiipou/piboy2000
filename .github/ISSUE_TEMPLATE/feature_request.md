@@ -1,5 +1,5 @@
 ---
-name: Feature request
+name: 🚀 Feature request
 about: Suggest an idea for this project
 title: "[Feature] Add the konami code somewhere to do something"
 labels: feature
