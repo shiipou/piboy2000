@@ -20,6 +20,10 @@ Currently on development Nothing really work, but I hope I can get an useless bu
 
 ## Dependences
 
+### Linux
+ - omxplayer -> This is a video player that allow user to play any video (for the boot animation for example)
+
+### Python
  - pygame -> This is the main dependences of the projet, this allow the creation of the screen on TTY
  - requests -> This allow to call the web API or to get any web resources (useful for google map for example)
  - pydub -> This allow to convert any audio format into any other audio format (useful for listening radio for example)
