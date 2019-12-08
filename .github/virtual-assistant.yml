@@ -1,0 +1,19 @@
+labeler:
+  issues:
+    actions:
+      - opened
+      - milestoned
+    at-least-one:
+      labels:
+        - bug
+        - feature
+      default: bug
+
+assigner:
+  issues:
+    project:
+      url: https://github.com/Nocturlab/piboy2000/projects/1
+      column: To do
+    actions:
+      - opened
+      - milestoned
