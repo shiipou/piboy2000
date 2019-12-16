@@ -62,3 +62,7 @@ We use [Github Actions](http://github.com/features/actions) as CI/CD.
 * [Norphiil](https://github.com/norphiil/)
 
 See also the list of all [contributors](https://github.com/Nocturlab/piboy2000/graphs/contributors) who participated in this project.
+
+## Special thanks
+
+Thanks to Robin Selmer for his css stylesheet fallout like terminal.
